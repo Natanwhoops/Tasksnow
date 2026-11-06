@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Minhas tarefas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header><div class="logo">✓</div><div><h1>Minhas tarefas</h1><p id="today"></p></div></header>
+    <form id="form">
+      <input id="title" maxlength="120" placeholder="Adicionar uma tarefa..." required autocomplete="off">
+      <select id="priority" aria-label="Prioridade">
+        <option value="medium">Média</option><option value="high">Alta</option><option value="low">Baixa</option>
+      </select>
+      <button class="add" aria-label="Adicionar">+</button>
+    </form>
+    <nav>
+      <button class="tab selected" data-tab="pending">Pendentes <span id="pending-count">0</span></button>
+      <button class="tab" data-tab="completed">Concluídas <span id="completed-count">0</span></button>
+    </nav>
+    <section>
+      <div class="section-head"><div><h2 id="heading">Suas tarefas</h2><p id="hint">Arraste para mudar a ordem ou use as setas.</p></div></div>
+      <ul id="tasks"></ul>
+      <div id="empty" class="empty"><div>☑</div><b>Nenhuma tarefa por aqui</b><p>Adicione uma tarefa acima para começar.</p></div>
+    </section>
+    <footer><span>Salvo automaticamente neste dispositivo</span><button id="clear" hidden>Limpar concluídas</button></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
